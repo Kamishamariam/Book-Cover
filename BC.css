@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{width: 100%;height: 100%;}
+
+body{
+    background:white;
+}
+
+.container{
+    width: 500px;
+    height: 700px;
+    background: url(https://i.pinimg.com/originals/2a/bf/f1/2abff1f452cae4f057e5791b299d3060.png);
+    position: relative;
+    top: 50%;
+    left: 55%;
+    right: 50%;
+    bottom: 20%;
+    transform: translate(-50%,-50%);
+    perspective: 1000px;
+}
+
+.cover{
+    width: 460px;
+    height: 100%;
+    position: absolute;
+    left: 50px;
+    background-color: olivedrab;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all .5s ease-in;
+}
+
+.container:hover .cover{
+    transform: rotateY(-180deg);
+}
+
+figure{
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+figure.front{
+    background: url(https://www.bitchmedia.org/sites/default/files/styles/article_one-third_width/public/Followers%20by%20Megan%20Angelo.jpg?itok=0QtCo8KF);
+}
+figure.back{
+    background:url(https://cdn.shopify.com/s/files/1/0468/4270/8124/articles/2559482522_17550934_1200x.jpg?v=1608216062);
+    transform: rotateY(180deg);
+}
+
